@@ -631,7 +631,7 @@ class BrowserSession:
 def render(
     url: Optional[str] = None,
     *,
-    headless: bool = True,
+    headless: Union[bool, str] = True,
     proxy: Optional[Union[str, BaseProxy]] = None,
     response: Optional[hrequests.response.Response] = None,
     session: Optional[hrequests.session.TLSSession] = None,
