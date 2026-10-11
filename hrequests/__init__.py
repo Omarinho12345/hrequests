@@ -39,7 +39,7 @@ if BROWSER_SUPPORT == '1':
 else:
     from rich import print as rprint
 
-    if not os.getenv('HREQUESTS_MODULE'):
+    if not os.getenv('HREQUESTS_MODULE') and not os.getenv('HREQUESTS_NO_BROWSER_WARNING'):
         rprint(
             r'[bright_yellow]WARNING: Please run [white]pip install hrequests\[all][/] for automated browsing support.'
         )
